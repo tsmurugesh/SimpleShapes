@@ -9,7 +9,6 @@ function setup() {
 
 // Draw code goes here
 function draw() {
-  background(0);
-  fill(240,56,0);
-  text("Hello, World", width/2, height/2);
+// pink bg
+  background('#ffb2e0');
 }
