@@ -18,6 +18,7 @@ function draw() {
   myEye();
   myLine();
   myRect();
+  myRectTwo();
   myArc();
   myDraggedEllipse();
   myQuad();
@@ -36,6 +37,7 @@ function myEye(){
 
 }
 
+// shape 3, an arc
 function myArc(){
 	angleMode(RADIANS);
 	noFill();
@@ -44,7 +46,7 @@ function myArc(){
 	arc(600,700,300,100,0,PI);
 }
 
-// shape 3 made color changing triangle
+// shape 4 made color changing triangle
 function myTriangle(){
 	noStroke();
   if (mouseX > 600 && mouseY < 400){
@@ -61,14 +63,14 @@ function myTriangle(){
   }
   triangle(500, 230, 370, 400, 550, 600);
 }
-// shape 4, inverse moving line
+// shape 5, inverse moving line
 function myLine(){
 	stroke(255);
 	strokeWeight(1);
 	line(0,0, mouseY,mouseX);
 }
 
-// shape 5, centered square that chnages
+// shape 6, centered square that chnages to circle
 function myRect(){
 	angleMode(DEGREES);
 	noStroke();
@@ -78,6 +80,7 @@ function myRect(){
 
 }
 
+// shape 7, ellipse and stretches
 function myDraggedEllipse(){
 	noStroke();
 	fill("red");
@@ -91,6 +94,7 @@ function mouseDragged() {
   }
  }
 
+// shape 8, quad that chnages color on clicks
  function myQuad(){
  	fill(0,value, 255);
  	quad(800,100, 900,200,950,400,759,600);
@@ -105,6 +109,7 @@ function mouseDragged() {
   }
  }
 
+ // shape(s) 9, cluster of random points
  function myPoint(){
  	for (let i = 399; i < 600; i++) {
   	    let r = random(100);
@@ -114,8 +119,12 @@ function mouseDragged() {
   	   }
  }
 
+//shape 10, rect that appears on click
  function myRectTwo(){
- 	
+ 	noFill();
+ 	stroke(45,78,140,value);
+ 	strokeWeight(2);
+ 	rect(1100,500,100,500);
  }
 
 
